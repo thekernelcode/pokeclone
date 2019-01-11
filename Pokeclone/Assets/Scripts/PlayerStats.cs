@@ -25,12 +25,6 @@ public class PlayerStats : MonoBehaviour
     // UI
     public GameObject combatTextGO;
 
-    // TEST
-
-    GameObject otherGO;
-    public 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -83,8 +77,8 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("You have entered into COMBAT");
         isInCombat = true;
         CancelInvoke();
-        CameraMain.active = false;
-        CameraCombat.active = true;
+        CameraMain.SetActive(false);
+        CameraCombat.SetActive(true);
 
         combatTextGO.gameObject.SetActive(true);
         combatTextGO.GetComponent<Text>().text = "NOW FIGHT";
